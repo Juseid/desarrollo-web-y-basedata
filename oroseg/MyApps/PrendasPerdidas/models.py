@@ -1,16 +1,16 @@
 from django.db import models
 from django.utils.timezone import now
-from MyApps.clientes.models import Clientes
+from MyApps.empeños.models import Empeños
 
 class PrendasPerdidas(models.Model):
     FechaPerdida=models.DateField(auto_now=True, verbose_name="Fecha de empeño")
-    Fk_empeño = models.ForeignKey(Clientes,
+    Fk_empeño = models.ForeignKey(Empeños,
                                   null=True,
                                   blank=True,
                                   on_delete=models.CASCADE)
     
-    def __str__(self):
-        return self.Fk_empeño
+    # def __str__(self):
+    #     return self.FechaPerdida
 
 
     class Meta:

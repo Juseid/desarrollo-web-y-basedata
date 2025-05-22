@@ -20,6 +20,3 @@ class Prendas(models.Model):
         verbose_name="prenda"
         verbose_name_plural="prendas"
     
-
-
-
