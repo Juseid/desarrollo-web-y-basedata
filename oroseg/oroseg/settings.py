@@ -66,7 +66,8 @@ INSTALLED_APPS = [
     'MyApps.abonos.apps.AbonosConfig',
     'MyApps.clientes.apps.ClientesConfig', 
     'MyApps.empeños.apps.EmpeñosConfig',  
-    'MyApps.prendas.apps.PrendasConfig',  
+    'MyApps.prendas.apps.PrendasConfig', 
+    'MyApps.PrendasPerdidas.apps.PrendasPerdidasConfig', 
 ]
 
 MIDDLEWARE = [
