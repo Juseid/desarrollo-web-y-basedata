@@ -13,7 +13,7 @@ class PrendasPerdidas(models.Model):
     
     def __str__(self):    
         if self.Fk_empeño and self.Fk_empeño.fk_cliente and self.Fk_empeño.fk_cliente.nombre and self.fk_prenda and self.fk_prenda.Descripcion:
-            return f"{self.fk_prenda.Descripcion} de {self.Fk_empeño.fk_cliente.nombre}"
+            return f"{self.fk_prenda.Descripcion} || {self.Fk_empeño.fk_cliente.nombre}"
         return "Prenda perdida"
 
 

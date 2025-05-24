@@ -12,7 +12,6 @@ class Empeños(models.Model):
     ]
     FechaEmpeño = models.DateField( verbose_name="Fecha de Empeño")
     # FechaEmpeño = models.DateField(auto_now=True, verbose_name="Fecha de Empeño")
-
     PlazoMeses = models.IntegerField(default=4, editable=False, verbose_name="Plazo mes")
     InteresMensual = models.DecimalField(max_digits=10,decimal_places=2, verbose_name="interes por MES")
     Estado = models.CharField(max_length=1,choices=estado, default="A", verbose_name="estado del empeño")
@@ -23,8 +22,9 @@ class Empeños(models.Model):
 
 
     def __str__(self):
-        return f"empeño del cliente {self.fk_cliente.nombre} con fecha {self.FechaEmpeño} y plazo de {self.PlazoMeses} meses"
-
+        # return f"empeño del cliente {self.fk_cliente.nombre} con fecha {self.FechaEmpeño} y plazo de {self.PlazoMeses} meses"
+        return f"empeño del cliente {self.fk_cliente.nombre}"
+        
     class Meta:
         verbose_name="empeño"
         verbose_name_plural="empeños"

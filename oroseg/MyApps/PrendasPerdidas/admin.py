@@ -5,7 +5,8 @@ from MyApps.PrendasPerdidas.models import PrendasPerdidas
 # Register your models here.
 
 class PrendasPerdidasAdmin(admin.ModelAdmin):
-    pass #error
+    list_display = ("Fk_empeño",'fk_prenda','FechaPerdida',)
+
 
 
 admin.site.register(PrendasPerdidas, PrendasPerdidasAdmin)

@@ -6,8 +6,7 @@ from MyApps.empeños.models import Empeños
 class Abonos(models.Model):
     estado = [
         ('I','interes'),
-        ('C','capital'),
-        
+        ('C','capital'),   
     ]
 
     fecha = models.DateField(default=now, verbose_name="Fecha del abono")
@@ -20,7 +19,7 @@ class Abonos(models.Model):
 
 
     def __str__(self):
-        return self.tipoabono
+        return self.fk_empeño.fk_cliente.nombre
 
     class Meta:
         verbose_name="abono"
