@@ -7,6 +7,7 @@ class Abonos(models.Model):
     estado = [
         ('I','interes'),
         ('C','capital'),
+        
     ]
 
     fecha = models.DateField(default=now, verbose_name="Fecha del abono")
@@ -19,7 +20,7 @@ class Abonos(models.Model):
 
 
     def __str__(self):
-        return self.nombre
+        return self.tipoabono
 
     class Meta:
         verbose_name="abono"

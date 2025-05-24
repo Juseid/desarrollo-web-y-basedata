@@ -9,12 +9,13 @@ class Prendas(models.Model):
     fk_clientes = models.ForeignKey(Clientes,
                                     null=True,
                                     blank=True,
-                                    on_delete=models.CASCADE)
-    
+                                    on_delete=models.CASCADE)  
 
     def __str__(self):
-        return self.Descripcion
-
+        if self.fk_clientes:
+            return self.fk_clientes.nombre
+        return "Sin cliente"
+    
 
     class Meta:
         verbose_name="prenda"

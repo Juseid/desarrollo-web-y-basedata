@@ -4,8 +4,8 @@ from MyApps.PrendasPerdidas.models import PrendasPerdidas
 
 # Register your models here.
 
-# class PrendasPerdidasAdmin(admin.ModelAdmin):
-#     pass
+class PrendasPerdidasAdmin(admin.ModelAdmin):
+    pass #error
 
 
-# admin.site.register(PrendasPerdidas, PrendasPerdidasAdmin)
+admin.site.register(PrendasPerdidas, PrendasPerdidasAdmin)

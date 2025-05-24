@@ -6,8 +6,6 @@ from MyApps.clientes.models import Clientes
 
 class ClienteAdmin(admin.ModelAdmin):
 
-    readonly_fields = ('nombre',) #No permite edicion de create y update
-    # readonly_fields = ('created', 'updated') #No permite edicion de create y update
     list_display = ('nombre', 'documento', 'telefono', 'correo')
     ordering = ('nombre', 'documento', 'telefono', 'correo')  # En caso que sea una sola ordering('column',)
     #form de busqueda
